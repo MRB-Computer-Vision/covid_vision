@@ -6,7 +6,6 @@ Development Lead
 ----------------
 
 * Edson Cavalcanti Neto <profedsoncavalcanti@gmail.com>
-
 Contributors
 ------------
 

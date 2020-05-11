@@ -1,4 +1,4 @@
-.. highlight:: shell
+edsoncavalcanti@hotmail.com.. highlight:: shell
 
 ============
 Contributing
@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/edsoncavalcanti/covid_vision/issues.
+Report bugs at https://github.com/MRB-Computer-Vision/covid_visionhttps://github.com/edsoncavalcanti/covid_vision/issues
 
 If you are reporting a bug, please include:
 
@@ -45,7 +45,7 @@ articles, and such.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/edsoncavalcanti/covid_vision/issues.
+The best way to send feedback is to file an issue at https://github.com/MRB-Computer-Vision/covid_visionhttps://github.com/edsoncavalcanti/covid_vision/issues
 
 If you are proposing a feature:
 
