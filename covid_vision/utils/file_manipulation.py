@@ -1,6 +1,7 @@
 from pathlib import Path
 import os
-
+from google_drive_downloader import GoogleDriveDownloader as gdd
+import zipfile
 def make_dir(path):
     """
     Create the directory and subdirectories
@@ -8,7 +9,7 @@ def make_dir(path):
     """
     Path(path).mkdir(parents=True, exist_ok=True)
 
-def download_from_google_drive(self, file_id, folder, name):
+def download_from_google_drive(file_id, folder, name):
     """
     Download a file from Google
     @param file_id identifier from google drive
