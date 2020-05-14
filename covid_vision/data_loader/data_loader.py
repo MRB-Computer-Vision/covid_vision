@@ -15,8 +15,9 @@ class DataLoader:
         file_id = "1SG5PorcAdZvTrp6KbivSHQv4TKgMqusW"
         download_from_google_drive(file_id=file_id, folder="data/", name="dataset_covid_19.zip")
 
-    def load_dataset(self):
 
+    def load_dataset(self):
+        """ Load the dataset base on the specific type """
         if self.data_type == "xray":
             if not list_files("data/Dataset COVID-19 Augmented"):
                 self._download_xray_datasets()

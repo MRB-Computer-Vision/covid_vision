@@ -36,7 +36,11 @@ def read_names(path):
 
 
 def list_files(path, verbose=False):
-
+    """
+    List the files inside a specific path
+    @param path path to the files
+    @param verbose if True the files path will be printed
+    """
     files = []
     # r=root, d=directories, f = files
     for r, d, f in os.walk(path):
