@@ -2,6 +2,11 @@
 History
 =======
 
+0.1.2 (2020-05-13)
+------------------
+
+* Configuration of pipeline to publish test package.
+
 0.1.1 (2020-05-13)
 ------------------
 
