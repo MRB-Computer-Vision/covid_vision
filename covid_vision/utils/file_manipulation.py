@@ -1,13 +1,17 @@
+"""Functions of file manipulation"""
 from pathlib import Path
 import os
 from google_drive_downloader import GoogleDriveDownloader as gdd
 import zipfile
+
+
 def make_dir(path):
     """
     Create the directory and subdirectories
     @param path to create the directories
     """
     Path(path).mkdir(parents=True, exist_ok=True)
+
 
 def download_from_google_drive(file_id, folder, name):
     """
@@ -21,6 +25,7 @@ def download_from_google_drive(file_id, folder, name):
     with zipfile.ZipFile(folder + name, 'r') as zip_ref:
         zip_ref.extractall(folder)
 
+
 def read_names(path):
     """
     Read the files with names of classes and returns one array with strings
@@ -29,7 +34,8 @@ def read_names(path):
     file = open(path, 'r')
     return file.readlines()
 
-def list_files(path, verbose = False):
+
+def list_files(path, verbose=False):
 
     files = []
     # r=root, d=directories, f = files
