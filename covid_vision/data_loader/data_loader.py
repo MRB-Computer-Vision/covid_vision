@@ -5,7 +5,8 @@ import cv2
 class DataLoader:
 
     def __init__(self, data_type):
-        self.images = dict()
+        self.images = {'covid': list(),
+                       'non-covid': list()}
         self.data_type = data_type
 
     def _download_xray_datasets(self):

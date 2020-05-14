@@ -5,6 +5,7 @@ from covid_vision.data_loader.data_loader import DataLoader
 
 class TestDataLoader(unittest.TestCase):
     def setUp(self):
+
         pass
 
     def test_xray_data_loader(self):
