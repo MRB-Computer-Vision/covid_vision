@@ -47,7 +47,7 @@ setup(
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/edsoncavalcanti/covid_vision',
-    version='0.1.0',
+    url='https://github.com/MRB-Computer-Vision/covid_vision',
+    version='0.1.1',
     zip_safe=False,
 )
