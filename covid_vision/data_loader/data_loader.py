@@ -18,7 +18,7 @@ class DataLoader:
     def load_dataset(self):
 
         if self.data_type is "xray":
-            if list_files("data/Dataset COVID-19 Augmented"):
+            if not list_files("data/Dataset COVID-19 Augmented"):
                 self._download_xray_datasets()
             names_covid = list_files("data/Dataset COVID-19 Augmented/COVID-19")
             names_noncovid = list_files("data/Dataset COVID-19 Augmented/Non-COVID-19")
