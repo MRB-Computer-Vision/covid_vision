@@ -6,15 +6,12 @@ class DataLoader:
 
     def __init__(self, data_type):
         self.images = dict()
-        self.images['covid'] = []
-        self.images['non-covid'] = []
         self.data_type = data_type
 
     def _download_xray_datasets(self):
         """Download the XRay dataset from Google"""
         file_id = "1SG5PorcAdZvTrp6KbivSHQv4TKgMqusW"
         download_from_google_drive(file_id=file_id, folder="data/", name="dataset_covid_19.zip")
-
 
     def load_dataset(self):
         """ Load the dataset base on the specific type """
@@ -30,7 +27,5 @@ class DataLoader:
         elif self.data_type == "anamnesis":
             raise NotImplementedError
 
-        for name in names_covid:
-            self.images['covid'].append(cv2.imread(name))
-        for name in names_noncovid:
-            self.images['non-covid'].append(cv2.imread(name))
+        self.images['covid'] = [cv2.imread(name) for name in names_covid]
+        self.images['non-covid'] = [cv2.imread(name) for name in names_noncovid]
