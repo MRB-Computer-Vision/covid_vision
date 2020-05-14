@@ -4,8 +4,7 @@
 name: Upload Python Package - Test Environment
 
 on:
-  release:
-    types: [created]
+  push:
     branches: [develop]
 
 jobs:
