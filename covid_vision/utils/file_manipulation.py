@@ -22,9 +22,11 @@ def download_from_google_drive(file_id, folder, name):
     """
     make_dir(folder)
     gdd.download_file_from_google_drive(file_id=file_id, dest_path=folder + name, showsize=True)
-    with zipfile.ZipFile(folder + name, 'r') as zip_ref:
-        zip_ref.extractall(folder)
-
+    try:
+        with zipfile.ZipFile(folder + name, 'r') as zip_ref:
+            zip_ref.extractall(folder)
+    except:
+        pass
 
 def read_names(path):
     """
