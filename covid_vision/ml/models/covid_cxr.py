@@ -8,7 +8,10 @@ from covid_vision.utils.file_manipulation import download_from_google_drive, lis
 
 class CovidCXR(ClassifierInterface):
     """Covid CXR class to implement the code from https://github.com/aildnont/covid-cxr"""
-
+    """
+    Created on Wed May 20 17:39:40 2020
+    @author: Julio Chilela and Lirio Ramalheira
+    """
     model = None
     img_width, img_height = 224, 224
     CLASSES = ['non-COVID-19', 'COVID-19']
