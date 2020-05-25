@@ -8,3 +8,4 @@ To use Covid Vision in a project::
     clf = CovidCXR()
     img = clf.read_image(PATH_TO_IMAGE)
     result = clf.predict(img)
+
