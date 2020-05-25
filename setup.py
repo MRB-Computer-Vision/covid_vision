@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 
 """The setup script."""
-
+import os
+import sys
+from setuptools.extension import Extension
+from setuptools.command.build_ext import build_ext
 from setuptools import setup, find_packages
 
 with open('README.rst') as readme_file:
@@ -41,7 +44,7 @@ setup(
             'covid_vision=covid_vision.cli:main',
         ],
     },
-    install_requires=requirements,
+    install_requires=install_reqs,
     license="MIT license",
     long_description=readme + '\n\n' + history,
     include_package_data=True,
