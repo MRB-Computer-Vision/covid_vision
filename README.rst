@@ -32,7 +32,7 @@ Features
 --------
 
 - DataLoader: Load the images dataset for the user.
-
+- CovidCXR: Download CovidCXR model and predict one image
 
 Credits
 -------

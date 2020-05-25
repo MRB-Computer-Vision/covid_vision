@@ -7,6 +7,8 @@ from covid_vision.utils.file_manipulation import download_from_google_drive, lis
 
 
 class CovidCXR(ClassifierInterface):
+    """Covid CXR class to implement the code from https://github.com/aildnont/covid-cxr"""
+
     model = None
     img_width, img_height = 224, 224
     CLASSES = ['non-COVID-19', 'COVID-19']
@@ -15,12 +17,17 @@ class CovidCXR(ClassifierInterface):
         self.load_model()
 
     def _download_cxr_model(self):
-        """Download the XRay dataset from Google"""
+        """Download the model from Google"""
         file_id = "1KIsLmVv8jKTVG_LxchMZAvR7rugHy7uB"
         download_from_google_drive(file_id=file_id, folder="data/", name="covid_cxr.zip")
 
 
     def read_image(self, path):
+        '''
+        Read one image from the path.
+        :param path: Path to the iamge
+        :return: A numpy array with the image read from file
+        '''
         img = image.load_img(path, target_size=(self.img_width, self.img_height))
         x = image.img_to_array(img)
         x = np.expand_dims(x, axis=0)
@@ -28,7 +35,9 @@ class CovidCXR(ClassifierInterface):
         return img
 
     def load_model(self):
-
+        '''
+        Load Covid CXR model.
+        '''
         if not os.path.exists(self.model_path):
             self._download_cxr_model()
 
@@ -40,8 +49,7 @@ class CovidCXR(ClassifierInterface):
     def predict(self, image):
         '''
         Runs model prediction on 1 or more input images.
-        :param x: Image(s) to predict
-        :param model: A Keras model
+        :param image: Image(s) to predict
         :return: A numpy array comprising a list of class probabilities for each prediction
         '''
         y = self.model.predict(image, batch_size=32)  # Run prediction on the perturbations
