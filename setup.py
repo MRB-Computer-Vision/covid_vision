@@ -10,7 +10,11 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ ]
+HERE = os.path.abspath(os.path.dirname(__file__))
+setup_reqs = ['Cython', 'numpy']
+with open(os.path.join(HERE, 'requirements.txt')) as fp:
+    install_reqs = [r.rstrip() for r in fp.readlines()
+                    if not r.startswith('#') and not r.startswith('git+')]
 
 setup_requirements = ['pytest-runner', ]
 
