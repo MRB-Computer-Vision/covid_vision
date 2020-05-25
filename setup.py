@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 
 """The setup script."""
-
+import os
+import sys
+from setuptools.extension import Extension
+from setuptools.command.build_ext import build_ext
 from setuptools import setup, find_packages
 
 with open('README.rst') as readme_file:
@@ -10,7 +13,13 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ ]
+
+HERE = os.path.abspath(os.path.dirname(__file__))
+setup_reqs = ['Cython', 'numpy']
+with open(os.path.join(HERE, 'requirements.txt')) as fp:
+    install_reqs = [r.rstrip() for r in fp.readlines()
+                    if not r.startswith('#') and not r.startswith('git+')]
+
 
 setup_requirements = ['pytest-runner', ]
 
@@ -37,7 +46,7 @@ setup(
             'covid_vision=covid_vision.cli:main',
         ],
     },
-    install_requires=requirements,
+    install_requires=install_reqs,
     license="MIT license",
     long_description=readme + '\n\n' + history,
     include_package_data=True,
@@ -47,7 +56,7 @@ setup(
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/edsoncavalcanti/covid_vision',
-    version='0.1.0',
+    url='https://github.com/MRB-Computer-Vision/covid_vision',
+    version='0.1.4',
     zip_safe=False,
 )

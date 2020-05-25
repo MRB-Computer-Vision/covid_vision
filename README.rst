@@ -22,11 +22,17 @@ This project aims to develop Computer Vision algorithms to help the detection of
 * Free software: MIT license
 * Documentation: https://covid-vision.readthedocs.io.
 
+Install the project
+-------------------
+
+`python setup.py install`
 
 Features
 --------
 
-* TODO
+- DataLoader: Load the images dataset for the user.
+- CovidCXR: Download CovidCXR model and predict one image
+
 
 Credits
 -------
