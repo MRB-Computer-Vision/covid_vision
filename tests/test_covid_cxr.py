@@ -2,8 +2,8 @@ import unittest
 
 
 class TestCovidCXR(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)
+    def setUp(self) -> None:
+        pass
 
 
 if __name__ == '__main__':
