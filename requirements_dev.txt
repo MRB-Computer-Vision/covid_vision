@@ -12,6 +12,6 @@ pytest-runner==5.1
 sphinx-rtd-theme==0.4.3
 googledrivedownloader==0.4
 opencv-python==4.2.0.34
-tensorflow==2.2.0
+tensorflow==2.5.3
 Keras==2.3.1
 Pillow==8.2.0
