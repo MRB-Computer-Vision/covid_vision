@@ -19,3 +19,4 @@ Contributors
 * Lirio Ramalho <lirio.ramalheira@angolacables.co.ao>
 * Raul Medeiros <raul.medeiros.rm@gmail.com>
 * Thiago Augusto <ferreirathiago@me.com>
+* Sam Faraday <saurater@gmail.com>
